@@ -8,9 +8,8 @@ use App\Models\Collage;
 use App\Models\Image;
 use App\Permissions\CollagePermissions;
 use App\Repositories\ImageRepo;
-use Carbon\Carbon;
 use chillerlan\QRCode\QRCode;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
@@ -152,7 +151,9 @@ class CollageController extends Controller
         if($afterImageId) {
             $imageRepo->uploadedAfter($afterImageId);
         }
-        return $imageRepo->get(['id', 'type', 'link']);
+        return collect($imageRepo->get()->map(function (Image $image){
+            return $image->only(['id', 'type', 'link']);
+        }));
     }
 /*
     public function moderationQueue(int $id) : array

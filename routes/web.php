@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/masonry.js', function(){
+    return file_get_contents(base_path('node_modules/masonry-layout/dist/masonry.pkgd.js'));
+});
 
 Route::group(['prefix' => 'collages', 'middleware' => 'auth'], function() {
     Route::get('create', function() {
@@ -33,6 +36,8 @@ Route::group(['prefix' => 'collages', 'middleware' => 'auth'], function() {
     });
 
     Route::get('{id}', 'CollageController@show');
+    Route::get('{collage}/ui-images', 'CollageController@imagesForUi');
+    Route::get('{collage}/ui-images/after-image-id/{afterImageId}', 'CollageController@imagesForUi');
 });
 
 Route::group(['prefix' => 'u'], function() {

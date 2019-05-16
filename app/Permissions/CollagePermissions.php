@@ -52,12 +52,11 @@ class CollagePermissions extends CommonPermissions
                 self::verifyCanModerate($collage, $user);
                 break;
             case Collage::PUBLICITY_PRIVATE:
+            */
             default:
                 self::verifyIsAdminOrCurrentUser($user);
                 return;
-            */
         }
-        throw new UnauthorizedException('Collage is not available.');
     }
 
     public static function uploadImage(Collage $collage, User $user = null) : void

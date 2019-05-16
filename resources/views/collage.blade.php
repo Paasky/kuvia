@@ -95,23 +95,20 @@
     }
 
     .collage-image-portrait {
-        width:  25vw;
-        height: 33.3333333vw;
+        width:  15vw;
+        height: 20vw;
     }
 
     .collage-image-landscape {
-        width:  25vw;
-        height: 16.6666666vw;
+        width:  20vw;
+        height: 15vw;
     }
 </style>
+
 @section('content')
 <div class="container collage-view">
     <div id="collage-view-subtext">{{ __('Add images using the QR-code or link') }}</div>
-    <div id="collage-view-images">
-        @foreach($collage->images as $image)
-            <div class="collage-image collage-image-{{ $image->type }}" style="background-image: url({{ $image->link }})"></div>
-        @endforeach
-    </div>
+    <div id="collage-view-images"></div>
     <div id="collage-view-links">
         <div id="collage-view-short-url">
             <img id="collage-view-qr" src="{{ $qr }}" alt="QR-code">
@@ -120,3 +117,53 @@
     </div>
 </div>
 @endsection
+
+<script src="/masonry.js"></script>
+<script>
+    var collageId = {{ $collage->id }};
+    var lastImageId = 0;
+    var $grid = null;
+    var masonry = null;
+    var imageLoader = null;
+
+    window.onload = function() {
+        console.log('window.onload');
+        $grid = $('#collage-view-images');
+        imageLoader = setInterval(loadNewImages, 5000);
+        loadNewImages();
+    };
+
+    function loadNewImages() {
+        var url = '/collages/' + collageId + '/ui-images/after-image-id/' + lastImageId;
+        console.log('Load new images: '+url);
+        $.getJSON(url, function (images) {
+            console.log(images);
+            images.forEach(function (image) {
+                if($('.collage-image-'+image.id).length) {
+                    return;
+                }
+
+                var $elem = $(getImageHtml(image));
+                $grid.prepend($elem);
+
+                if(!masonry) {
+                    console.log('boot masonry with img id '+image.id);
+                    masonry = new Masonry('#collage-view-images', {itemSelector: '.collage-image', columnWidth: 1});
+                } else {
+                    console.log('prepend img id '+image.id);
+                    masonry.prepended($elem[0]);
+                }
+
+                lastImageId = image.id;
+            });
+        });
+    }
+
+    function getImageHtml(image) {
+        return '' +
+            '<div ' +
+            '   class="collage-image collage-image-' + image.type + ' collage-image-' + image.id + '" ' +
+            '   style="background-image: url(' + image.link + ')">' +
+            '</div>';
+    }
+</script>
