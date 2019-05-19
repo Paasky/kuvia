@@ -115,20 +115,14 @@ class CollageController extends Controller
             throw new \InvalidArgumentException(__('This image was uploaded already, try another one'));
         }
 */
-        $filePath = $file->getRealPath();
-        $imageData = \Spatie\Image\Image::load($filePath);
-
-        if($imageData->getWidth() > $imageData->getHeight()) {
-            $type = Image::LANDSCAPE;
-        } else {
-            $type = Image::PORTRAIT;
-        }
-
+        $imageData = \Spatie\Image\Image::load($file->getRealPath());
+        $imageData->orientation('auto');
         if($imageData->getWidth() > 4096 || $imageData->getHeight() > 4096) {
-            $imageData
-                ->fit(Manipulations::FIT_CONTAIN, 4096, 4096)
-                ->save($filePath);
+            $imageData->fit(Manipulations::FIT_CONTAIN, 4096, 4096);
         }
+        $imageData->save();
+
+        $type = $imageData->getWidth() > $imageData->getHeight() ? Image::LANDSCAPE : Image::PORTRAIT;
 
         $image = Image::create([
             'collage_id' => $collage->id,
@@ -140,7 +134,7 @@ class CollageController extends Controller
             ->addMedia($file->getRealPath())
             ->toMediaCollection($type);
 
-        $request->session()->flash('status', __("Your image has been uploaded and will be shown in the collection shortly!"));
+        $request->session()->flash('success', __("Your image has been uploaded and will be shown in the collection shortly!"));
         return redirect("/u/{$collageKey}");
     }
 

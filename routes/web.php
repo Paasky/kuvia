@@ -18,9 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/masonry.js', function(){
-    return file_get_contents(base_path('node_modules/masonry-layout/dist/masonry.pkgd.js'));
-});
 
 Route::group(['prefix' => 'collages', 'middleware' => 'auth'], function() {
     Route::get('create', function() {

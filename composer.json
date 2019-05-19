@@ -25,7 +25,8 @@
         "spatie/laravel-medialibrary": "^7.6",
         "spatie/laravel-permission": "^2.37",
         "spatie/laravel-personal-data-export": "^1.0",
-        "spatie/laravel-validation-rules": "^2.1"
+        "spatie/laravel-validation-rules": "^2.1",
+        "ext-exif": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
