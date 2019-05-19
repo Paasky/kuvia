@@ -47,24 +47,98 @@ h1, h2 {
 }
 
 /* TILE MENU */
-.menu-tile {
-    padding: 1em 0;
-    margin: 15px 0;
+.menu-tiles {
     background: #df691a;
-    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    line-height: 48px;
+    font-size: 24px;
+    text-align: right;
 }
-    .menu-tile a {
-        color: #ebebeb !important;
-        text-decoration: none;
+.menu-tiles.open {
+    padding-left: 20px;
+    background: none;
+    line-height: inherit;
+    font-size: inherit;
+    text-align: center;
+}
+    .menu-tiles, .menu-tiles * {
+        animation: all 1s;
     }
-    .menu-tile .fas, .menu-tile img {
-        font-size: 3em;
-        padding: 0.5em;
+    .menu-tile {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        text-align: center;
     }
-    .menu-tile img {
-        height: 2em;
+    .menu-tile.active {
+        background: #ebebeb !important;
     }
-    .menu-tile p {
-        font-size: 1.5em;
-        font-weight: 300;
+    .menu-tiles.open .menu-tile {
+        padding: 1em 0;
+        background: #df691a;
+        box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.35);
+        width: 200px;
+        height: auto;
+        max-width: 90%;
+        margin: 0 20px 20px 0;
     }
+    .menu-tile#menu-toggle {
+        width: 1.5em;
+        text-shadow: 0 0 4px #000;
+    }
+    .menu-tiles.open #menu-toggle {
+        transform: rotate(180deg);
+        display: block;
+        padding: 0;
+        height: inherit;
+        box-shadow: none;
+        margin-left: -20px;
+        width: 100%;
+        width: calc(100% + 20px);
+        max-width: 100vw;
+        margin-bottom: 20px;
+    }
+        .menu-tiles.open #menu-toggle .fas {
+            font-size: 2em;
+        }
+        .menu-tiles.open #menu-toggle p {
+            display: none;
+        }
+        .menu-tile img {
+            height: 1em;
+            margin-top: -0.25em;
+        }
+        .menu-tiles.active .menu-tile img {
+            font-size: 2em;
+            height: 2em;
+        }
+        .menu-tile a {
+            color: #ebebeb;
+            text-decoration: none;
+        }
+        .menu-tile.active a {
+            color: #df691a !important;
+        }
+        .menu-tiles.open .menu-tile .fas, .menu-tiles.open .menu-tile img {
+            font-size: 3em;
+            padding: 0.5em;
+        }
+        .menu-tile img {
+            height: 1em;
+            margin-top: -0.25em;
+        }
+        .menu-tiles.open .menu-tile img {
+            height: 2em;
+            margin-top: 0;
+        }
+        .menu-tile p {
+            display: none;
+        }
+        .menu-tiles.open .menu-tile p {
+            display: block;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        .menu-tiles.open .menu-tile.active p {
+            font-weight: bold;
+        }

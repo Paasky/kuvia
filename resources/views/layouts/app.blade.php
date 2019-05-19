@@ -14,6 +14,7 @@
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer></script>
     <script src="{{ asset('js/popper.min.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.4.3.1.bundle.min.js') }}" defer></script>
+    <script src="{{ asset('js/custom.js') }}" defer></script>
 
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
@@ -23,77 +24,52 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img id="navbar-brand-logo" src="{{ asset('img/kuvia_logo.svg') }}" alt="{{ config('app.name', 'Laravel') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+        <div class="menu-tiles">
+            <?php $tiles = [
+                [
+                    'id' => 'menu-toggle',
+                    'title' => 'Menu',
+                    'icon' => 'fa-chevron-down',
+                    'url' => '#',
+                ],
+                [
+                    'id' => 'menu-collages',
+                    'title' => 'My Collages',
+                    'src' => 'collage-icon-alt-light.svg',
+                    'url' => '/collages',
+                ],
+                [
+                    'id' => 'menu-uploads',
+                    'title' => 'My Uploads',
+                    'icon' => 'fa-images',
+                    'url' => '/images',
+                ],
+                [
+                    'id' => 'menu-options',
+                    'title' => 'Options',
+                    'icon' => 'fa-user-cog',
+                    'url' => '/options',
+                ],
+                [
+                    'id' => 'menu-logout',
+                    'title' => 'Logout',
+                    'icon' => 'fa-sign-out-alt',
+                    'url' => '/logout',
+                ],
+            ]; ?>
+            @foreach($tiles as $tile)
+                <div id="{{ $tile['id'] }}" class="menu-tile {{ '/'.request()->path() == $tile['url'] ? 'active' : '' }}">
+                    <a href="{{ $tile['url'] }}">
+                        @if(isset($tile['icon']))
+                            <i class="fas {{ $tile['icon'] }}"></i>
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="/collages">{{__('My Collages')}}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/collages/create">{{__('Create Collage')}}</a>
-                            </li>
-                            @foreach($collages ?? [] as $collage)
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/collages/{{ $collage->id }}">{{ $collage->title }}</a>
-                                </li>
-                            @endforeach
-
-                            <li class="divider"></li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/uploads">{{__('My Uploads')}}</a>
-                            </li>
-
-                            <li class="divider"></li>
-
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                            <img src="{{ asset("img/{$tile['src']}") }}" alt="{{ $tile['title'] }}">
+                        @endif
+                        <p>{{ $tile['title'] }}</p>
+                    </a>
                 </div>
-            </div>
-        </nav>
+            @endforeach
+        </div>
 
         <main class="py-4">
             @if(session('success') || session('warning') || session('danger') || session('info'))
