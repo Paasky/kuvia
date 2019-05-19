@@ -40,3 +40,31 @@ h1, h2 {
     margin-top: -0.25em;
     padding-right: 0.25em;
 }
+
+/* FONT AWESOME FIXES */
+.fas.fa-user-cog {
+    margin-left: 0.3em;
+}
+
+/* TILE MENU */
+.menu-tile {
+    padding: 1em 0;
+    margin: 15px 0;
+    background: #df691a;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.35);
+}
+    .menu-tile a {
+        color: #ebebeb !important;
+        text-decoration: none;
+    }
+    .menu-tile .fas, .menu-tile img {
+        font-size: 3em;
+        padding: 0.5em;
+    }
+    .menu-tile img {
+        height: 2em;
+    }
+    .menu-tile p {
+        font-size: 1.5em;
+        font-weight: 300;
+    }

@@ -13,15 +13,12 @@
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer></script>
     <script src="{{ asset('js/popper.min.js') }}" defer></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <script src="{{ asset('js/bootstrap.4.3.1.bundle.min.js') }}" defer></script>
 
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.4.3.1.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fontawesome.5.8.2.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') . '?v='.filemtime(public_path('css/custom.css')) }}" rel="stylesheet">
 </head>
 <body>

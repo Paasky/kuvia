@@ -1,5 +1,23 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/fonts/Quicksand-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 700;
+    src: url('/fonts/Quicksand-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    src: url('/fonts/Quicksand-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Quicksand';
+    font-weight: 300;
+    src: url('/fonts/Quicksand-Light.ttf') format('truetype');
+}
 
 // Variables
 @import 'variables';

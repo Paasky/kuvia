@@ -2,28 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce417d1f-c1ec-46a4-a217-fb373c245833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/collage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/kuvia_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/kuvia_logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/kuvia_logo_light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/kuvia_logo_light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/collage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/masonry.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.4.3.1.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/fontawesome.5.8.2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CollageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CollageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.4.3.1.bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/collage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/collage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/minimal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/minimal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,75 +30,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="819" column="13" selection-start-line="819" selection-start-column="13" selection-end-line="819" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/collage.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/collage.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#li#8;n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CollageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
-              <folding>
-                <element signature="e#40#83#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/spatie/laravel-medialibrary/src/HasMedia/HasMediaTrait.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/spatie/image/src/Manipulations.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="82" column="11" selection-start-line="82" selection-start-column="11" selection-end-line="82" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="68">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -113,33 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret column="138407" selection-start-column="138396" selection-end-column="138407" />
-              <folding>
-                <element signature="e#22182#22416#2" expanded="true" />
-                <element signature="e#23220#23373#1" expanded="true" />
-                <element signature="e#23413#23647#1" expanded="true" />
-                <element signature="e#26648#26924#2" expanded="true" />
-                <element signature="e#27756#27909#1" expanded="true" />
-                <element signature="e#27949#28225#1" expanded="true" />
-                <element signature="e#56673#56860#2" expanded="true" />
-                <element signature="e#57089#57225#2" expanded="true" />
-                <element signature="e#57630#57763#2" expanded="true" />
-                <element signature="e#58907#59060#1" expanded="true" />
-                <element signature="e#69778#70008#2" expanded="true" />
-                <element signature="e#70860#71097#2" expanded="true" />
-                <element signature="e#98612#98789#2" expanded="true" />
-                <element signature="e#98835#99012#2" expanded="true" />
-              </folding>
+            <state relative-caret-position="430">
+              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -162,12 +65,17 @@
       <find>size(</find>
       <find>--blue</find>
       <find>*/</find>
-      <find>manipulate(['rotate' =&gt;</find>
+      <find>Lato</find>
       <find>font-weight</find>
+      <find>manipulate(['rotate' =&gt;</find>
+      <find>Nunito</find>
+      <find>h2</find>
     </findStrings>
     <replaceStrings>
       <replace>$models</replace>
       <replace>orientation(</replace>
+      <replace>Quicksand</replace>
+      <replace>h3</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -205,14 +113,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/public/js/collage.js" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/public/css/collage.css" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/collage.blade.php" />
         <option value="$PROJECT_DIR$/public/js/popper.min.js" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CollageController.php" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public/css/custom.css" />
       </list>
     </option>
@@ -345,8 +256,9 @@
       <path value="$PROJECT_DIR$/vendor/chillerlan/php-qrcode" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="949" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
     <option name="width" value="980" />
     <option name="height" value="1031" />
   </component>
@@ -407,7 +319,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -415,13 +327,13 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pekko\code\kuvia-dev\public\css" />
       <recent name="C:\Users\Pekko\code\kuvia-dev\public\img" />
       <recent name="C:\Users\Pekko\code\kuvia-dev\public\js" />
-      <recent name="C:\Users\Pekko\code\kuvia-dev\public\css" />
       <recent name="C:\Users\Pekko\code\kuvia-dev\resources\js\components" />
       <recent name="C:\Users\Pekko\code\kuvia-dev\app\Http\Requests" />
     </key>
@@ -462,18 +374,18 @@
       <workItem from="1557685547540" duration="311000" />
       <workItem from="1557859930013" duration="5780000" />
       <workItem from="1557944002071" duration="8318000" />
-      <workItem from="1557994063286" duration="10474000" />
+      <workItem from="1557994063286" duration="16016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78874000" />
+    <option name="totallyTimeSpent" value="84416000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="633" y="0" width="653" height="687" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" weight="0.56661046" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" weight="0.5659919" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.21862349" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -485,7 +397,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32792792" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32792792" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.09769094" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -508,27 +420,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="104" column="74" selection-start-line="104" selection-start-column="74" selection-end-line="104" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13670" column="31" lean-forward="true" selection-start-line="13670" selection-start-column="31" selection-end-line="13670" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CollageCreateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/collages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -758,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="77" lean-forward="true" selection-start-column="77" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -811,7 +695,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/jquery-3.4.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.bundle.min.js">
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.4.3.1.bundle.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -820,10 +704,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/collage.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        <state relative-caret-position="382">
+          <caret line="10681" column="1" selection-start-line="10681" selection-start-column="1" selection-end-line="10681" selection-end-column="1" />
+          <folding>
+            <element signature="e#30162#30396#2" expanded="true" />
+            <element signature="e#31288#31441#1" expanded="true" />
+            <element signature="e#31483#31717#1" expanded="true" />
+            <element signature="e#35085#35361#2" expanded="true" />
+            <element signature="e#36280#36433#1" expanded="true" />
+            <element signature="e#36475#36751#1" expanded="true" />
+            <element signature="e#69965#70152#2" expanded="true" />
+            <element signature="e#70407#70543#2" expanded="true" />
+            <element signature="e#70998#71131#2" expanded="true" />
+            <element signature="e#72841#72994#1" expanded="true" />
+            <element signature="e#86255#86485#2" expanded="true" />
+            <element signature="e#87497#87733#2" expanded="true" />
+            <element signature="e#121868#122045#2" expanded="true" />
+            <element signature="e#122100#122277#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.4.3.1.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret column="138357" selection-start-column="138346" selection-end-column="138357" />
+          <folding>
+            <element signature="e#22182#22416#2" expanded="true" />
+            <element signature="e#23220#23373#1" expanded="true" />
+            <element signature="e#23413#23647#1" expanded="true" />
+            <element signature="e#26648#26924#2" expanded="true" />
+            <element signature="e#27756#27909#1" expanded="true" />
+            <element signature="e#27949#28225#1" expanded="true" />
+            <element signature="e#56673#56860#2" expanded="true" />
+            <element signature="e#57089#57225#2" expanded="true" />
+            <element signature="e#57630#57763#2" expanded="true" />
+            <element signature="e#58907#59060#1" expanded="true" />
+            <element signature="e#69778#70008#2" expanded="true" />
+            <element signature="e#70860#71097#2" expanded="true" />
+            <element signature="e#98612#98789#2" expanded="true" />
+            <element signature="e#98835#99012#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -858,6 +781,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/collage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -865,43 +795,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#li#8;n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/public/css/fontawesome.5.8.2.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret column="138407" selection-start-column="138396" selection-end-column="138407" />
-          <folding>
-            <element signature="e#22182#22416#2" expanded="true" />
-            <element signature="e#23220#23373#1" expanded="true" />
-            <element signature="e#23413#23647#1" expanded="true" />
-            <element signature="e#26648#26924#2" expanded="true" />
-            <element signature="e#27756#27909#1" expanded="true" />
-            <element signature="e#27949#28225#1" expanded="true" />
-            <element signature="e#56673#56860#2" expanded="true" />
-            <element signature="e#57089#57225#2" expanded="true" />
-            <element signature="e#57630#57763#2" expanded="true" />
-            <element signature="e#58907#59060#1" expanded="true" />
-            <element signature="e#69778#70008#2" expanded="true" />
-            <element signature="e#70860#71097#2" expanded="true" />
-            <element signature="e#98612#98789#2" expanded="true" />
-            <element signature="e#98835#99012#2" expanded="true" />
-          </folding>
+        <state relative-caret-position="141">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="430">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
         </state>
       </provider>
     </entry>
