@@ -24,11 +24,11 @@ class CollageController extends Controller
 
         do {
             $key =
-                str_shuffle('bcdfghjklmnpqrstvwxz') .
-                str_shuffle('aeiouy') .
-                str_shuffle('bcdfghjklmnpqrstvwxz') .
-                str_shuffle('aeiouy') .
-                str_shuffle('bcdfghjklmnpqrstvwxz');
+                substr(str_shuffle('bcdfghjklmnpqrstvwxz'), 0, 1) .
+                substr(str_shuffle('aeiouy'), 0, 1) .
+                substr(str_shuffle('bcdfghjklmnpqrstvwxz'), 0, 1) .
+                substr(str_shuffle('aeiouy'), 0, 1) .
+                substr(str_shuffle('bcdfghjklmnpqrstvwxz'), 0, 1);
         } while (
             Collage::where('key', $key)->exists()
         );
@@ -48,14 +48,7 @@ class CollageController extends Controller
         CollagePermissions::list(Auth::user());
         return Collage::all();
     }
-/*
-    public function listPublic() : array
-    {
-        return Collage::where('visibility', 'public')
-            ->where('disabled_at', null)
-            ->get(['title', 'id', 'created_at']);
-    }
-*/
+
     public function show(int $id)
     {
         $collage = Collage::findOrFail($id);
@@ -83,7 +76,7 @@ class CollageController extends Controller
      * @return bool
      * @throws \Exception
      */
-    public function delete(string $id) : bool
+    public function delete(int $id) : bool
     {
         $collage = Collage::findOrFail($id);
         CollagePermissions::delete($collage, $this->user);
@@ -110,11 +103,6 @@ class CollageController extends Controller
         CollagePermissions::uploadImage($collage, Auth::user());
 
         $file = $request->file('image');
-/*
-        if(Image::where('orig_filename', $file->getFilename())->where('created_at', '>', Carbon::parse('-24h'))) {
-            throw new \InvalidArgumentException(__('This image was uploaded already, try another one'));
-        }
-*/
         $imageData = \Spatie\Image\Image::load($file->getRealPath());
         $imageData->orientation('auto');
         if($imageData->getWidth() > 4096 || $imageData->getHeight() > 4096) {
@@ -134,8 +122,15 @@ class CollageController extends Controller
             ->addMedia($file->getRealPath())
             ->toMediaCollection($type);
 
-        $request->session()->flash('success', __("Your image has been uploaded and will be shown in the collection shortly!"));
+        session()->flash('success', __("Your image has been uploaded and will be shown in the collection shortly!"));
         return redirect("/u/{$collageKey}");
+    }
+
+    public function images(Collage $collage)
+    {
+        return View
+            ::make('collage-images')
+            ->with('collage', $collage);
     }
 
     public function imagesForUi(Collage $collage, int $afterImageId = null) : Collection

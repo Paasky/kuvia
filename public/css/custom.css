@@ -55,7 +55,7 @@ h1, h2 {
     text-align: right;
 }
 .menu-tiles.open {
-    padding-left: 20px;
+    padding-left: 1em;
     background: none;
     line-height: inherit;
     font-size: inherit;
@@ -66,9 +66,15 @@ h1, h2 {
     }
     .menu-tile {
         display: inline-block;
-        width: 48px;
         height: 48px;
         text-align: center;
+        padding: 0 0.5em;
+    }
+    @media(max-width: 639px) {
+        .menu-tile {
+            width: 48px;
+            padding: 0;
+        }
     }
     .menu-tile.active {
         background: #ebebeb !important;
@@ -79,8 +85,13 @@ h1, h2 {
         box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.35);
         width: 200px;
         height: auto;
-        max-width: 90%;
-        margin: 0 20px 20px 0;
+        max-width: 40%;
+        margin: 0 1em 1em 0;
+    }
+    @media(max-width: 480px) {
+        .menu-tiles.open .menu-tile:not(#menu-toggle) {
+            font-size: 0.5em;
+        }
     }
     .menu-tile#menu-toggle {
         width: 1.5em;
@@ -92,16 +103,16 @@ h1, h2 {
         padding: 0;
         height: inherit;
         box-shadow: none;
-        margin-left: -20px;
+        margin-left: -1em;
         width: 100%;
-        width: calc(100% + 20px);
+        width: calc(100% + 1em);
         max-width: 100vw;
-        margin-bottom: 20px;
+        margin-bottom: 1em;
     }
         .menu-tiles.open #menu-toggle .fas {
             font-size: 2em;
         }
-        .menu-tiles.open #menu-toggle p {
+        .menu-tiles #menu-toggle p {
             display: none;
         }
         .menu-tile img {
@@ -132,13 +143,33 @@ h1, h2 {
             margin-top: 0;
         }
         .menu-tile p {
-            display: none;
+            font-size: 0.5em;
+            display: inline;
+            position: relative;
+            top: -0.4em;
+        }
+        @media(max-width: 639px) {
+            .menu-tile p {
+                display: none;
+            }
         }
         .menu-tiles.open .menu-tile p {
             display: block;
             font-size: 1.5em;
             font-weight: 300;
+            top: auto;
         }
         .menu-tiles.open .menu-tile.active p {
             font-weight: bold;
         }
+
+.collage-admin-image {
+    height: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+    .collage-admin-image-actions {
+        position: absolute;
+        bottom: 2em;
+    }

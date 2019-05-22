@@ -19,7 +19,10 @@ class ImagePermissions extends CommonPermissions
 
     public static function delete(Image $image, User $user = null) : void
     {
-        if($image->collage->user->id === ($user->id ?? null)) {
+        if($image->user_id === ($user->id ?? null)) {
+            return;
+        }
+        if($image->collage->user_id === ($user->id ?? null)) {
             return;
         }
         self::verifyIsAdmin($user);

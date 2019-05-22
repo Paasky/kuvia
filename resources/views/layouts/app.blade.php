@@ -24,53 +24,54 @@
 </head>
 <body>
     <div id="app">
-        <div class="menu-tiles">
-            <?php $tiles = [
-                [
-                    'id' => 'menu-toggle',
-                    'title' => 'Menu',
-                    'icon' => 'fa-chevron-down',
-                    'url' => '#',
-                ],
-                [
-                    'id' => 'menu-collages',
-                    'title' => 'My Collages',
-                    'src' => 'collage-icon-alt-light.svg',
-                    'url' => '/collages',
-                ],
-                [
-                    'id' => 'menu-uploads',
-                    'title' => 'My Uploads',
-                    'icon' => 'fa-images',
-                    'url' => '/images',
-                ],
-                [
-                    'id' => 'menu-options',
-                    'title' => 'Options',
-                    'icon' => 'fa-user-cog',
-                    'url' => '/options',
-                ],
-                [
-                    'id' => 'menu-logout',
-                    'title' => 'Logout',
-                    'icon' => 'fa-sign-out-alt',
-                    'url' => '/logout',
-                ],
-            ]; ?>
-            @foreach($tiles as $tile)
-                <div id="{{ $tile['id'] }}" class="menu-tile {{ '/'.request()->path() == $tile['url'] ? 'active' : '' }}">
-                    <a href="{{ $tile['url'] }}">
-                        @if(isset($tile['icon']))
-                            <i class="fas {{ $tile['icon'] }}"></i>
-                        @else
-                            <img src="{{ asset("img/{$tile['src']}") }}" alt="{{ $tile['title'] }}">
-                        @endif
-                        <p>{{ $tile['title'] }}</p>
-                    </a>
-                </div>
-            @endforeach
-        </div>
-
+        @auth
+            <div class="menu-tiles">
+                <?php $tiles = [
+                    [
+                        'id' => 'menu-toggle',
+                        'title' => 'Menu',
+                        'icon' => 'fa-chevron-down',
+                        'url' => '#',
+                    ],
+                    [
+                        'id' => 'menu-collages',
+                        'title' => 'My Collages',
+                        'src' => 'collage-icon-alt-light.svg',
+                        'url' => '/collages',
+                    ],
+                    [
+                        'id' => 'menu-uploads',
+                        'title' => 'My Uploads',
+                        'icon' => 'fa-images',
+                        'url' => '/images',
+                    ],
+                    [
+                        'id' => 'menu-options',
+                        'title' => 'Options',
+                        'icon' => 'fa-user-cog',
+                        'url' => '/options',
+                    ],
+                    [
+                        'id' => 'menu-logout',
+                        'title' => 'Logout',
+                        'icon' => 'fa-sign-out-alt',
+                        'url' => '/logout',
+                    ],
+                ]; ?>
+                @foreach($tiles as $tile)
+                    <div id="{{ $tile['id'] }}" class="menu-tile {{ '/'.request()->path() == $tile['url'] ? 'active' : '' }}">
+                        <a href="{{ $tile['url'] }}">
+                            @if(isset($tile['icon']))
+                                <i class="fas {{ $tile['icon'] }}"></i>
+                            @else
+                                <img src="{{ asset("img/{$tile['src']}") }}" alt="{{ $tile['title'] }}">
+                            @endif
+                            <p>{{ $tile['title'] }}</p>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        @endauth
         <main class="py-4">
             @if(session('success') || session('warning') || session('danger') || session('info'))
                 <div class="row">

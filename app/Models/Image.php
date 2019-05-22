@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Filesystem\Filesystem;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\Models\Media;
@@ -113,5 +114,15 @@ class Image extends KuviaModel implements HasMedia
             ->height(1024)
             ->sharpen(10)
             ->performOnCollections([self::CONVERSION_REGULAR_PORTRAIT]);
+    }
+
+    public function delete()
+    {
+        $fs = new Filesystem();
+        foreach($this->media as $media) {
+            $fs->delete($media->getPath());
+            $media->delete();
+        }
+        return parent::delete();
     }
 }

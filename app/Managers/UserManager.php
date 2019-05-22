@@ -31,7 +31,7 @@ class UserManager
         if(!$user){
             return false;
         }
-        return $user->is_admin;
+        return (bool) $user->is_admin;
     }
 
     public static function hasActiveSubscription(User $user, SubscriptionPlan $plan) : bool

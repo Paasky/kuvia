@@ -28,9 +28,6 @@ abstract class CommonPermissions
 
     protected static function verifyIsAdmin(User $user = null) : void
     {
-        self::verifyIsLoggedIn();
-
-        $user = System::getLoggedInUserOrNull();
         if(!UserManager::isAdmin($user)){
             throw new UnauthorizedException('You don\'t have permission.');
         }
