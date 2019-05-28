@@ -96,6 +96,7 @@ h1, h2 {
     .menu-tile#menu-toggle {
         width: 1.5em;
         text-shadow: 0 0 4px #000;
+        margin-bottom: -0.5em;
     }
     .menu-tiles.open #menu-toggle {
         transform: rotate(180deg);
