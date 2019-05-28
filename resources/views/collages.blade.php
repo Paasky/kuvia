@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+<style>
+    #collage-create {
+        line-height: 15.333333em;
+    }
+
+    #collage-create a {
+        color: #ebebeb;
+        text-decoration: none !important;
+    }
+</style>
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -25,11 +36,7 @@
         <div class="col-md-4 collage-index-item">
             <div class="card">
                 <div class="card-body text-center" id="collage-create">
-                    <h5 class="card-title" style="opacity: 0;">.</h5>
-                    <p class="card-text" style="opacity: 0;">.</p>
-                    <a class="btn btn-primary" href="/collages/create">{{ __('New Collage') }}</a>
-                    <hr style="opacity: 0">
-                    <p class="card-text" style="opacity: 0">. <input class="form-control"></p>
+                    <a href="/collages/create">{{ __('Create new Collage') }}</a>
                 </div>
             </div>
         </div>

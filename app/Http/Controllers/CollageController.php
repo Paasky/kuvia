@@ -17,7 +17,7 @@ use Spatie\Image\Manipulations;
 
 class CollageController extends Controller
 {
-    public function create(CollageCreateRequest $request) : void
+    public function create(CollageCreateRequest $request)
     {
         $user = Auth::user();
         CollagePermissions::create($user);
@@ -40,7 +40,8 @@ class CollageController extends Controller
         ];
         Collage::create($params);
 
-        redirect('/collages');
+        session()->flash('success', __('Collage created'));
+        return redirect()->to('/collages');
     }
 
     public function list() : array

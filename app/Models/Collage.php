@@ -45,6 +45,7 @@ class Collage extends KuviaModel
         'user_id',
         'title',
         'publicity',
+        'key',
     ];
 
     protected $appends = [
