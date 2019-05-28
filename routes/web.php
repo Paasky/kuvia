@@ -36,6 +36,7 @@ Route::group(['prefix' => 'collages', 'middleware' => 'auth'], function() {
     Route::get('{collage}/images', 'CollageController@images');
     Route::get('{collage}/ui-images', 'CollageController@imagesForUi');
     Route::get('{collage}/ui-images/after-image-id/{afterImageId}', 'CollageController@imagesForUi');
+    Route::get('{collage}/delete', 'CollageController@delete');
 });
 
 Route::group(['prefix' => 'u'], function() {

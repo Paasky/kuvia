@@ -65,4 +65,13 @@ class Collage extends KuviaModel
     {
         return $this->key ? "u/{$this->key}" : '';
     }
+
+    public function delete() : bool
+    {
+        foreach ($this->images ?? [] as $image) {
+            $image->delete();
+        }
+
+        return parent::delete();
+    }
 }

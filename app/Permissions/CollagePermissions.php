@@ -74,14 +74,20 @@ class CollagePermissions extends CommonPermissions
         self::verifyCanModerate($collage);
     }
 
-    public static function edit(Collage $collage) : void
+    public static function edit(Collage $collage, User $user = null) : void
     {
+        if($collage->user_id == ($user->id ?? null)) {
+            return;
+        }
         self::verifyIsAdminOrCurrentUser($collage->getUser());
     }
 
-    public static function delete(Collage $collage) : void
+    public static function delete(Collage $collage, User $user = null) : void
     {
-        self::verifyIsAdminOrCurrentUser($collage->getUser());
+        if($collage->user_id == ($user->id ?? null)) {
+            return;
+        }
+        self::verifyIsAdmin($user);
     }
 
     public static function viewAllCollageModerators() : void

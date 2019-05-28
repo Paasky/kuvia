@@ -63,25 +63,20 @@ class CollageController extends Controller
         );
     }
 
-    public function edit(Request $request, string $id) : Collage
+    public function update(Request $request, Collage $collage) : Collage
     {
-        $collage = Collage::findOrFail($id);
-        CollagePermissions::edit($collage, $this->user);
+        CollagePermissions::edit($collage, Auth::user());
         $collage->update($request->all());
-        return $collage;
+        session()->flash('success', __('Collage updated'));
+        return redirect()->back();
     }
 
-    /**
-     * @param int $id
-     * @return bool
-     * @throws \Exception
-     */
-    public function delete(int $id) : bool
+    public function delete(Collage $collage)
     {
-        $collage = Collage::findOrFail($id);
-        CollagePermissions::delete($collage, $this->user);
+        CollagePermissions::delete($collage, Auth::user());
         $collage->delete();
-        return true;
+        session()->flash('success', __('Collage deleted'));
+        return redirect()->back();
     }
 
     public function showUploadImage(string $collageKey)
