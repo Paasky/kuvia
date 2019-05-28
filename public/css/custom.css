@@ -46,6 +46,30 @@ h1, h2 {
     margin-left: 0.3em;
 }
 
+#logo-bar {
+    height: 48px;
+    position: absolute;
+    padding: 4px 12px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #ebebeb;
+    line-height: 36px;
+    font-weight: 200;
+}
+.open #logo-bar {
+    height: 64px;
+    font-size: 36px;
+    line-height: 48px;
+}
+    #logo-bar a {
+        text-decoration: none !important;
+    }
+    #logo-bar img {
+        height: 100%;
+        padding-right: 4px;
+    }
+
 /* TILE MENU */
 .menu-tiles {
     background: #df691a;

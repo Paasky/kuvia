@@ -24,8 +24,14 @@
 </head>
 <body>
     <div id="app">
-        @auth
-            <div class="menu-tiles {{ request()->path() == 'home' ? 'open' : '' }}">
+        <div class="menu-tiles {{ request()->path() == 'home' ? 'open' : '' }}">
+            <div id="logo-bar">
+                <a href="/">
+                    <img src="/img/kuvia_logo.svg" alt="logo">
+                    Kuvia
+                </a>
+            </div>
+            @auth
                 <?php $tiles = [
                     [
                         'id' => 'menu-toggle',
@@ -60,20 +66,24 @@
                         'url' => '/logout',
                     ],
                 ]; ?>
-                @foreach($tiles as $tile)
-                    <div id="{{ $tile['id'] }}" class="menu-tile {{ '/'.request()->path() == $tile['url'] ? 'active' : '' }}">
-                        <a href="{{ $tile['url'] }}">
-                            @if(isset($tile['icon']))
-                                <i class="fas {{ $tile['icon'] }}"></i>
-                            @else
-                                <img src="{{ asset("img/{$tile['src']}") }}" alt="{{ $tile['title'] }}">
-                            @endif
-                            <p>{{ $tile['title'] }}</p>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        @endauth
+            @elseauth
+                <?php $tiles = [
+
+                ]; ?>
+            @endauth
+            @foreach($tiles as $tile)
+                <div id="{{ $tile['id'] }}" class="menu-tile {{ '/'.request()->path() == $tile['url'] ? 'active' : '' }}">
+                    <a href="{{ $tile['url'] }}">
+                        @if(isset($tile['icon']))
+                            <i class="fas {{ $tile['icon'] }}"></i>
+                        @else
+                            <img src="{{ asset("img/{$tile['src']}") }}" alt="{{ $tile['title'] }}">
+                        @endif
+                        <p>{{ $tile['title'] }}</p>
+                    </a>
+                </div>
+            @endforeach
+        </div>
         <main class="py-4">
             @if(session('success') || session('warning') || session('danger') || session('info'))
                 <div class="row">
