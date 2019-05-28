@@ -25,7 +25,7 @@
 <body>
     <div id="app">
         @auth
-            <div class="menu-tiles">
+            <div class="menu-tiles {{ request()->path() == 'home' ? 'open' : '' }}">
                 <?php $tiles = [
                     [
                         'id' => 'menu-toggle',
@@ -45,12 +45,14 @@
                         'icon' => 'fa-images',
                         'url' => '/images',
                     ],
+                    /*
                     [
                         'id' => 'menu-options',
                         'title' => 'Options',
                         'icon' => 'fa-user-cog',
                         'url' => '/options',
                     ],
+                    */
                     [
                         'id' => 'menu-logout',
                         'title' => 'Logout',
