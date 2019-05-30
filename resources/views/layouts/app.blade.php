@@ -66,7 +66,8 @@
                         'url' => '/logout',
                     ],
                 ]; ?>
-            @elseauth
+            @endauth
+            @guest
                 <?php $tiles = [
 
                 ]; ?>
