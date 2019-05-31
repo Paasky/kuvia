@@ -35,5 +35,6 @@ Route::group(['prefix' => 'u'], function() {
 });
 
 Route::group(['prefix' => 'images'], function() {
+    Route::get('{image}', 'ImageController@get');
     Route::get('{image}/delete', 'ImageController@delete');
 });

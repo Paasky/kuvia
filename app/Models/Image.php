@@ -86,7 +86,12 @@ class Image extends KuviaModel implements HasMedia
             return $this->ext_url;
         }
 
-        return $this->getFirstMediaUrl($this->type);
+        return "/images/$this->id";
+    }
+
+    public function getPath() : string
+    {
+        return $this->getFirstMediaPath($this->type);
     }
 
     public function registerMediaCollections()
