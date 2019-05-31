@@ -112,6 +112,7 @@ class CollageController extends Controller
             'collage_id' => $collage->id,
             'user_id' => Auth::user()->id ?? null,
             'type' => $type,
+            'orig_filename' => $file->getFilename(),
         ]);
 
         $image

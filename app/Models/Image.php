@@ -51,6 +51,7 @@ class Image extends KuviaModel implements HasMedia
         'collage_id',
         'ext_url',
         'type',
+        'orig_filename',
     ];
 
     protected $appends = [

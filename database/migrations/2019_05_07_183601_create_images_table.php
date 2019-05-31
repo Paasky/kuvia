@@ -18,7 +18,8 @@ class CreateImagesTable extends Migration
             $table->timestamps();
             $table->integer('user_id')->nullable();
             $table->integer('collage_id');
-            $table->text('url')->nullable();
+            $table->text('type');
+            $table->text('ext_url')->nullable();
             $table->text('orig_filename');
 
             $table->index('user_id');
